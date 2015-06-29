@@ -2,48 +2,301 @@
 
     <head>
 
-        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
         <!-- Include roboto.css to use the Roboto web font, material.css to include the theme and ripples.css to style the ripple effect -->
         <link href="css/roboto.min.css" rel="stylesheet">
         <link href="css/material.min.css" rel="stylesheet">
         <link href="css/ripples.min.css" rel="stylesheet">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <link rel="stylesheet" href="css/animate.css">
+        <link href='http://fonts.googleapis.com/css?family=Text+Me+One' rel='stylesheet' type='text/css'>
+		<script src="js/jquery-1.11.3.min.js"></script>
+
+    <style>
+    * {
+         box-sizing: border-box;
+       }
+
+
+       header {
+           position: fixed;
+           top: 0;
+           width: 100%;
+           height: 150px;
+           background-color: #009587;
+           z-index: 99;
+           opacity: 1;
+           -webkit-transition: all 0.4s ease-in-out;
+           -moz-transition: all 0.4s ease-in-out;
+           transition: all 0.4s ease-in-out;
+           font-family: 'Text Me One', sans-serif;
+           font-size: 20px;
+       }
+
+       #my-top-header{ width: 100%;}
+
+       header.smaller {
+    height: 50px;
+    font-size:10px;
+}
+
+    header h1
+    {
+      font-family: 'Text Me One', sans-serif;
+      font-size: 50px;
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+    }
+
+    header.smaller h1{
+    height: 50px;
+    font-size:20px;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    }
+
+
+      body
+      {
+        margin: 0px;
+      }
+
+      #my-main-content
+      {
+         margin-top: 160px;
+      }
+
+      .shrink
+      {
+  padding: 20px 0
+}
+
+    .my-box
+    {
+      width: 49%;
+      height: 50%;
+
+    }
+
+    #my-main-content
+    {
+      padding-left: 2%;
+    }
+
+    .typed-cursor{
+        opacity: 1;
+        -webkit-animation: blink 0.7s infinite;
+        -moz-animation: blink 0.7s infinite;
+        animation: blink 0.7s infinite;
+    }
+    @keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    @-webkit-keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+    @-moz-keyframes blink{
+        0% { opacity:1; }
+        50% { opacity:0; }
+        100% { opacity:1; }
+    }
+
+
+    </style>
+
     </head>
 
     <body>
 
         <!-- Your site -->
 
-        <h1>You can add your site here.</h1>
+      <header class="header-panel shadow-z-2 container" id="my-top-header">
+        <h1>Rohit Nigam</h1>
+      </header>
 
-        <h2>To ensure that material-design theme is working, check out the buttons below.</h2>
+      <div id="my-main-content">
 
-        <h3 class="text-muted">If you can see the ripple effect on clicking them, then you are good to go!</h3>
+        <div class="btn panel panel-default my-box">
+  <div class="panel-body">
+    <div class="animated hiding" data-animation="fadeInDown" data-delay="500">
+            <h1>I like to <span id="typeout-text"></span>.</h1>
+            <p>Know more about all my work!</p>
+
+        </div>
+  </div>
+</div>
+<div class="btn panel panel-default my-box">
+<div class="panel-body">
+<div id='demo'></div>
+</div>
+</div>
+<div class="btn panel panel-default my-box">
+<div class="panel-body">
+Basic panel example
+</div>
+</div>
+<div class="btn panel panel-default my-box">
+<div class="panel-body">
+Basic panel example
+</div>
+</div>
+        <div class="btn jumbotron">
+    <h1>Jumbotron</h1>
+    <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <p><a class="btn btn-primary btn-lg">Learn more</a></p>
+</div>
 
 
-        <p class="bs-component">
-            <a href="javascript:void(0)" class="btn btn-default">Default</a>
-            <a href="javascript:void(0)" class="btn btn-primary">Primary</a>
-            <a href="javascript:void(0)" class="btn btn-success">Success</a>
-            <a href="javascript:void(0)" class="btn btn-info">Info</a>
-            <a href="javascript:void(0)" class="btn btn-warning">Warning</a>
-            <a href="javascript:void(0)" class="btn btn-danger">Danger</a>
-            <a href="javascript:void(0)" class="btn btn-link">Link</a>
-        </p>
+<div class="jumbotron">
+    <h1>Jumbotron</h1>
+    <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <p><a class="btn btn-primary btn-lg">Learn more</a></p>
+</div>
+<div class="jumbotron">
+    <h1>Jumbotron</h1>
+    <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <p><a class="btn btn-primary btn-lg">Learn more</a></p>
+</div>
+<div class="jumbotron">
+    <h1>Jumbotron</h1>
+    <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+    <p><a class="btn btn-primary btn-lg">Learn more</a></p>
+</div>
+      </div>
 
         <!-- Your site ends -->
 
-     
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+        <script src="js/bootstrap.min.js"></script>
 
         <script src="js/ripples.min.js"></script>
         <script src="js/material.min.js"></script>
+        <script src="js/jquery.lazylinepainter-1.5.1.js"></script>
+
         <script>
             $(document).ready(function() {
                 // This command is used to initialize some elements and make them work properly
                 $.material.init();
+                $(function () {
+                    $("#typeout-text").typed({
+                        strings: ["Code","Program","Develop"],
+                        typeSpeed: 150,
+                        backDelay: 900,
+                        loop: true
+                    });
+                });
             });
+
+            // resize the header to small size
+            $(document).on("scroll", function(){
+            		if
+                  ($(document).scrollTop() > 10 ){
+            		  $("header").addClass("smaller");
+            		}
+            		else
+            		{
+            			$("header").removeClass("smaller");
+            		}
+            	});
+
+
+
         </script>
+
+
+        <script type="text/javascript">
+
+
+			(function( $ ){
+
+				/*
+				* Lazy Line Painter
+				* SVG Stroke animation.
+				*
+				* https://github.com/camoconnell/lazy-line-painter
+				*
+				* Copyright 2014
+				* Cam O'Connell - http://www.camoconnell.com  http://www.behance.net/camoconnell
+				* Released under the MIT license
+				*
+				*/
+
+				// goto http://lazylinepainter.info to convert your svg into a svgData object.
+				var svgData = {
+					"demo" :
+					{
+            "strokepath": [
+            {
+                "path": "M68.5,54.2c3.7,0.5,5.9-0.3,9.4-2.2c1.4-0.7,6.1-3.8,4.6-6.1c-4.1-6.2-12.1,5.2-13.6,8.5c-3.3,7.3,4.7,8.6,9.8,6    c5-2.5,9.1-6.2,13.3-9.8c2-1.7,6.2-7.3,6.9-1.3c0.2,1.3,0.1,2.7-0.1,4c-2,1.5-3.9,2.9-5.9,4.4c-3.9-0.3-5.1-2-3.4-5    c0.3,0.4,0.8-0.2,0.5-0.5c-2.2-2.8-4,4.6,0.2,5.9c8.2,2.6,10.7-5.5,8.8-11.9c-0.3-1.1-1.3-1.7-2.3-0.9c-4.9,4.1-9.2,8.6-14.5,12.3    c-2.7,1.9-5.5,3.2-8.7,3.6c-7.8,0.9-3.1-8.1-1.4-10.6c1-1.5,2.3-2.4,3.6-3.5c1.3-0.6,2.7-1.2,4-1.8c1.8,2.6,1.4,4.5-1.2,5.6    c-2.7,2-6.6,3.3-9.9,2.8C68.2,53.4,68,54.1,68.5,54.2L68.5,54.2z",
+                "duration": 1000
+            },
+            {
+                "path": "M109.8,46.1c-0.3,1-2.2,2.9-2.8,3.6c-0.7,0.8-1.6,1.6-1.9,2.7c-0.4,1.3-2,4.5-0.8,5.7c1.6,1.6,3.2,1,5.2,0.5    c2.9-0.7,5.4-2.4,7.7-4.2c0.4-0.3-0.2-0.8-0.5-0.5c-1.8,1.4-3.7,2.7-5.9,3.5c-1.6,0.7-7.1,2.1-5.8-2c0.2-0.7,0.4-1.4,0.5-2.1    c0.4-1.5,1.5-2.5,2.5-3.7c0.8-0.9,2.1-2.1,2.5-3.4C110.7,45.8,110,45.6,109.8,46.1L109.8,46.1z",
+                "duration": 600
+            },
+            {
+                "path": "M114.2,37.4c-0.2,0-0.4,0-0.7,0c-0.5,0-0.5,0.8,0,0.8c0.1,0,0.2,0,0.3,0c0.5,0,0.5-0.8,0-0.8c-0.1,0-0.2,0-0.3,0    c-0.5,0-0.5,0.8,0,0.8c0.2,0,0.4,0,0.7,0C114.7,38.2,114.7,37.4,114.2,37.4L114.2,37.4z",
+                "duration": 600
+            },
+            {
+                "path": "M132.2,43c-1-8.7-10.6,2.1-12.3,4.9c-1,1.6-0.8,2.8,1.2,3.1c2.8,0.4,10.6-5.9,9.5,0.7c-0.9,5.7-2.3,11.6-4.9,16.7    c-1.4,2.7-3.8,5.6-6.2,7.4c-0.5-1.3-0.9-2.5-1.4-3.8c0.5-1.1,1.1-2.2,1.7-3.2c0.8-1.5,1.8-2.9,2.7-4.3c3.7-5.5,8.5-9.7,14.7-12.2    c0.6-0.2,7.4-2.9,5,1.5c-1.1,2.1-2.6,4-3.4,6.3c-0.1,0.2,0,0.3,0.2,0.4c2.1,1.3,5.5-2.9,6.8-4.1c1.5-1.3,5.5-4.8,6.2-0.9    c0.1,0.7,0.5,1.8,0.9,2.2c1.4,1.4,2,1.6,3.8,1.2c0.5-0.1,0.3-0.8-0.2-0.7c-4.5,0.9-2.9-5.3-5.8-6.1c-2.1-0.6-5.1,3.5-6.4,4.5    c-0.8,0.7-1.5,1.3-2.3,2c-3.7,3.1,0.3-3.3,0.8-4.5c0.5-1.1,1.8-2.9,0.3-3.8c-3.5-2.1-12,4.1-14.4,6c-3.6,2.8-6.3,6.7-8.7,10.5    c-1.8,2.8-4.7,6.7-3.3,10.1c0.1,0.2,0.2,0.3,0.5,0.3c4.3-0.7,7-5,9.1-8.5c3-5,3.9-11.3,5-16.9c0.2-0.9,0.9-5.4-1.4-4.8    c-2.3,0.6-4.4,1.8-6.6,2.6c-2.1,0.8-3-0.9-2-2.7c0.3-0.5,9.3-11.8,10.2-4.1C131.5,43.5,132.2,43.5,132.2,43L132.2,43z",
+                "duration": 1800
+            },
+            {
+                "path": "M50.1,27c-3.5,1.3-5.8,7.1-7.9,10c-4.9,6.7-9.9,13.3-15.3,19.5c-2.3,2.7-4.8,5.3-7.2,8c-0.3,0.3-0.6,0.6-0.9,1    c-2.4-0.4-2.9-1.6-1.3-3.6c2.4-5.6,6.7-0.8,8.5,0.9c4.5,4,10.5,6.7,16.5,7.5c9.4,1.3,20.7-5.2,24.1-14.1    c3.7-9.7,3.9-23.8-0.9-33.1c-5-9.8-17.8-9-26.6-6.3c-10.7,3.3-20.8,11.7-25.5,21.8c-4.4,9.4,0.1,18.4,9,22.7    c10.2,4.9,23.4,5.1,34,2.3c0.6-0.1,1.1-0.2,1.7-0.2c0.5-0.1,0.3-0.8-0.2-0.7c-5.3,0.8-10.1,2.2-15.5,2c-4.5-0.2-9-0.9-13.4-1.9    c-11-2.5-19.2-10.4-15.5-22.4C18.9,23.8,51,4.8,64.4,22.3c5.3,7,4.4,19.3,3.3,27.5c-1.6,11.7-12,19.7-23.5,19.8    c-5.5,0.1-12.2-3-16.4-6.3c-1.3-1-4.2-4.8-6.1-4.7c-3.6,0.2-7.9,5.3-5.4,8.8c0.1,0.2,0.3,0.2,0.5,0.1c3.4-1.5,5.6-5,8.1-7.7    c3.3-3.7,6.4-7.5,9.6-11.4c2.6-3.2,4.9-6.5,7.4-9.8c1.3-1.7,2.5-3.5,3.7-5.3c0.9-1.4,3.1-5,4.7-5.7C50.7,27.6,50.6,26.9,50.1,27    L50.1,27z",
+                "duration": 1800
+            }
+        ],
+        "dimensions": {
+            "width": 328,
+            "height": 170
+        }
+					}
+				}
+
+				$(document).ready(function(){
+
+          	var state = 'paint';
+					// Setup your Lazy Line element.
+					// see README file for more settings
+					$('#demo').lazylinepainter({
+            "svgData": svgData,
+            "strokeWidth": 2,
+            "strokeColor": "#000000",
+
+							'onComplete' : function(){
+								console.log('>> onComplete');
+                state='erase';
+                $('#demo').lazylinepainter(state);
+                state='paint';
+                  $('#demo').lazylinepainter(state);
+							},
+							'onStart' : function(){
+								console.log('>> onStart');
+							}
+						}
+					)
+
+					// Paint your Lazy Line, that easy!
+
+					$('#demo').lazylinepainter(state);
+
+
+				})
+
+
+
+
+			})( jQuery );
+
+		</script>
+
+<script src="js/typed.min.js"></script>
 
     </body>
 
