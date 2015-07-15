@@ -81,7 +81,7 @@
                   -webkit-transition: all 0.4s ease-in-out;
                   -moz-transition: all 0.4s ease-in-out;
                   transition: all 0.4s ease-in-out;
-                  height: 0%;
+
                 }
 
               #design {
@@ -518,7 +518,11 @@ $(document).ready(function () {
 
            if (c == 1) {
              $("#code-content").css("height", "200%");
-            $("#code-text").css({"line-height":"normal","visibility":"visible","opacity":"1"}); }
+            $("#code-text").css({"line-height":"normal","visibility":"visible","opacity":"1"});
+          var h = $("#code-text").height();
+          console.log(h);
+$("#code-content").height(h + (0.13*h));
+ }
            else { $("#code-content").css({ "height": "0"});
             $("#code-text").css({"opacity":"0","visibility":"hidden"});
 
