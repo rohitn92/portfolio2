@@ -9,6 +9,7 @@
         <link href="css/material.min.css" rel="stylesheet">
         <link href="css/ripples.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/animate.css" />
+  <script src="js/shine.min.js"></script>
 
         <script src="js/jquery-1.11.3.min.js"></script>
 
@@ -46,7 +47,9 @@
        }
        #code{
          float: left;
-
+         -webkit-animation-duration: 2s;
+         -moz-animation-duration: 2s;
+         animation-duration: 2s;
        }
 
                      #code-body {
@@ -83,6 +86,9 @@
 
               #design {
            float:left;
+           -webkit-animation-duration: 2s;
+           -moz-animation-duration: 2s;
+           animation-duration: 2s;
        }
        #design-body {
          background: #F9B32F;
@@ -119,6 +125,9 @@
 
                             #lead {
                               float: left;
+                              -webkit-animation-duration: 2s;
+                              -moz-animation-duration: 2s;
+                              animation-duration: 2s;
 
                      }
                      #lead-body {
@@ -341,6 +350,15 @@ header.smaller h1{
     }
 
 
+#footer{
+  background-color: white;
+  width: 100%;
+  height:70px;
+  position: fixed;
+text-align: center;
+bottom: 0;
+left: 0;
+}
 
     </style>
 
@@ -352,16 +370,16 @@ header.smaller h1{
 <div id="wrapper">
       <header class="header-panel shadow-z-2 container" id="my-top-header">
 
-       <h2>Portfolio</h2>
+       <h2 id="myTitle">Portfolio</h2>
 
-        <h1>ROHIT NIGAM</h1>
+        <h1 id="myName">ROHIT NIGAM</h1>
 
 
       </header>
 
       <div id="my-main-content">
 
-  <div class="panel panel-default my-box small wow rotateInDownLeft"  id="code">
+  <div class="panel panel-default my-box small wow fadeInUp"  id="code">
   <div class="panel-body" id="code-body">
     <h1>I like to <span id="typeout-text"></span>.</h1>
     <p>Know more about all my work!</p>
@@ -372,7 +390,7 @@ header.smaller h1{
 </div>
 
 
-<div class="panel panel-default my-box small wow rotateInDownLeft" id="design">
+<div class="panel panel-default my-box small wow zoomIn" id="design">
 <div class="panel-body" id="design-body">
 <h1>  I love </h1>
   <div id='demo'></div>
@@ -384,7 +402,7 @@ header.smaller h1{
 </div>
 
 
-<div class="panel panel-default my-box wow rotateInUpLeft" id="lead">
+<div class="panel panel-default my-box wow fadeInDown" id="lead">
 <div class="panel-body" id="lead-body">
 <h1> And a lot more! </h1>
 </div>
@@ -397,7 +415,7 @@ header.smaller h1{
      <div id="overlay"></div>
       </div>
         <!-- Your site ends -->
-        <div id="footer" style="background-color: white; bottom: 0;width: 100%; height: 10%; position: fixed;">
+        <div id="footer">
         <div class="page-container" style= " float:right; " >
              <div class="flipout">
                <div class="foc-main" id="contact" style = "   width: 40px;
@@ -422,6 +440,8 @@ header.smaller h1{
              </div>
          </div>
         </div>
+
+
 </div>
 
         <script src="js/bootstrap.min.js"></script>
@@ -557,6 +577,23 @@ $(".flipout").flipout_cards({
 </script>
 
 <script>
+var config = new shinejs.Config({
+  numSteps: 8,
+  opacity: 0.2,
+  opacityPow: 2.5,
+  offset: 0.17,
+  offsetPow: 2.1,
+  blur: 128,
+  blurPow: 4
+});
+var shine = new Shine(document.getElementById('myName'), config);
+
+window.addEventListener('mousemove', function(event) {
+  shine.light.position.x = event.clientX;
+  shine.light.position.y = event.clientY;
+  shine.draw();
+}, false);
+
 $(document).ready(function () {
 
        var  c=1, d=1, l=1, m=1;
@@ -566,7 +603,7 @@ $(document).ready(function () {
              $("#code-content").css("height", "200%");
             $("#code-text").css({"line-height":"normal","visibility":"visible","opacity":"1"});
           var h = $("#code-text").height();
-            $("#code-content").height(h + (0.13*h)); }
+            $("#code-content").height(h); }
            else { $("#code-content").css({ "height": "0"});
             $("#code-text").css({"opacity":"0","visibility":"hidden"});
         setTimeout(function() {$("#code-text").css("line-height","0"); }, 400);
@@ -580,7 +617,7 @@ $(document).ready(function () {
              $("#design-content").css("height", "200%");
             $("#design-text").css({"line-height":"normal","visibility":"visible","opacity":"1"});
           var h = $("#design-text").height();
-            $("#design-content").height(h + (0.13*h)); }
+            $("#design-content").height(h); }
            else { $("#design-content").css({ "height": "0"});
             $("#design-text").css({"opacity":"0","visibility":"hidden"});
         setTimeout(function() {$("#design-text").css("line-height","0"); }, 400);
@@ -594,7 +631,7 @@ $(document).ready(function () {
                     $("#lead-content").css("height", "200%");
                    $("#lead-text").css({"line-height":"normal","visibility":"visible","opacity":"1"});
                  var h = $("#lead-text").height();
-                   $("#lead-content").height(h + (0.13*h)); }
+                   $("#lead-content").height(h); }
                   else { $("#lead-content").css({ "height": "0"});
                    $("#lead-text").css({"opacity":"0","visibility":"hidden"});
                setTimeout(function() {$("#lead-text").css("line-height","0"); }, 400);
